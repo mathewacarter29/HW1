@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/burgerPic"
+        android:layout_width="325dp"
+        android:layout_height="77dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburger" />
+
+    <TextView
+        android:id="@+id/bunText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:text="Bun Type:"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/burgerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Patty Type:"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bunText" />
+
+    <RadioGroup
+        android:id="@+id/bunRG"
+        android:layout_width="267dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toEndOf="@+id/bunText"
+        app:layout_constraintTop_toBottomOf="@+id/burgerPic">
+
+        <RadioButton
+            android:id="@+id/whiteRB"
+            android:layout_width="77dp"
+            android:layout_height="29dp"
+            android:onClick="whiteRbAction"
+            android:text="White"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/wheatRB"
+            android:layout_width="84dp"
+            android:layout_height="27dp"
+            android:onClick="wheatRbAction"
+            android:text="Wheat"
+            android:textSize="10sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/pattyRG"
+        android:layout_width="260dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toEndOf="@+id/burgerText"
+        app:layout_constraintTop_toBottomOf="@+id/bunRG">
+
+        <RadioButton
+            android:id="@+id/beefRB"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:onClick="beefRbAction"
+            android:text="Beef"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/chickenRB"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:onClick="chickenRbAction"
+            android:text="Grilled Chicken"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/turkeyRB"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:onClick="turkeyRbAction"
+            android:text="Turkey"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/salmonRB"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:onClick="salmonRbAction"
+            android:text="Salmon"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/veggieRB"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:onClick="veggieRbAction"
+            android:text="Veggie"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/pickleCB"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="pickleCbAction"
+        android:text="Pickles"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tomatoCB"
+        app:layout_constraintTop_toBottomOf="@+id/mayoCB" />
+
+    <CheckBox
+        android:id="@+id/mustardCB"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:onClick="mustardCbAction"
+        android:text="Mustard"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toEndOf="@+id/pickleCB"
+        app:layout_constraintTop_toBottomOf="@+id/lettuceCB" />
+
+    <CheckBox
+        android:id="@+id/mushroomCB"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="mushroomCbAction"
+        android:text="Mushroom"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toppingsText" />
+
+    <CheckBox
+        android:id="@+id/tomatoCB"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="tomatoCbAction"
+        android:text="Tomato"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mushroomCB" />
+
+    <TextView
+        android:id="@+id/toppingsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toppings:"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pattyRG" />
+
+    <CheckBox
+        android:id="@+id/mayoCB"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:onClick="mayoCbAction"
+        android:text="Mayo"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/mushroomCB"
+        app:layout_constraintTop_toBottomOf="@+id/pattyRG" />
+
+    <CheckBox
+        android:id="@+id/lettuceCB"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:onClick="lettuceCbAction"
+        android:text="Lettuce"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toEndOf="@+id/mayoCB"
+        app:layout_constraintTop_toBottomOf="@+id/pattyRG" />
+
+    <EditText
+        android:id="@+id/burgerNum"
+        android:layout_width="193dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="How many burgers?"
+        android:inputType="numberSigned"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickleCB" />
+
+    <TextView
+        android:id="@+id/calorieText"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
+        android:text="Calories:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/burgerNum" />
+
+    <TextView
+        android:id="@+id/calorieNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/calorieText"
+        app:layout_constraintTop_toBottomOf="@+id/burgerNum" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="66dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:text="Price: $"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/burgerNum" />
+
+    <TextView
+        android:id="@+id/priceNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0.00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/priceText"
+        app:layout_constraintTop_toBottomOf="@+id/burgerNum" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="findNumBurgers"
+        android:text="Calculate"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/burgerNum"
+        app:layout_constraintTop_toBottomOf="@+id/mustardCB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
